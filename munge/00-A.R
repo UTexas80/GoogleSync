@@ -8,7 +8,7 @@ start.time = Sys.time()
 
 # VERSION HISTORY
 a00.version = "1.0.0"
-a00.ModDate = as.Date("2019-01-01")
+a00.ModDate = as.Date("2019-07-01")
 
-# 2019.01.01 - v.1.0.0
+# 2019.07.01 - v.1.0.0
 #  1st release

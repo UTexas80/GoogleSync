@@ -1,6 +1,6 @@
 # VERSION HISTORY
 z99.version = "1.0.0"
-z99.ModDate = as.Date("2019-01-01")
+z99.ModDate = as.Date("2019-07-01")
 
 # save RData image
 save.image("readability.RData")
