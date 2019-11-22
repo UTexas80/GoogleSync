@@ -3,6 +3,15 @@ helper.function <- function()
   return(1)
 }
 
+# Reading OneDrive files to R                                                  
+#  https://is.gd/DJU8BA
+read_url  <- function(url, ...){
+  tmpFile <- tempfile()
+  download.file(url, destfile = tmpFile)
+  url_csv <- readr::read_csv(tmpFile, ...)
+  return(url_csv)
+}
+
 # http://www.cookbook-r.com/Manipulating_data/Comparing_data_frames/
 dupsBetweenGroups <- function (df, idcol) {
     # df: the data frame

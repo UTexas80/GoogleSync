@@ -3,7 +3,7 @@ z99.version = "1.0.0"
 z99.ModDate = as.Date("2019-07-01")
 
 # save RData image
-save.image("readability.RData")
+save.image("GoogleSync.RData")
 
 ## DIAGNOSTIC PAGE
 s.info = sessionInfo()
@@ -29,7 +29,7 @@ if (length(s.info[["otherPkgs"]])> 0){
     dat = as.character(s.info[["otherPkgs"]][[i]]$Date)
     if(length(dat)==0){dat = " "}
     diagnostic = rbind(diagnostic,c(ver,dat))
-    
+
     diagnostic.names = c(diagnostic.names,s.info[["otherPkgs"]][[i]]$Package)
   }
 }
@@ -40,7 +40,7 @@ if (length(s.info[["loadedOnly"]])> 0){
     dat = as.character(s.info[["loadedOnly"]][[i]]$Date)
     if(length(dat)==0){dat = " "}
     diagnostic = rbind(diagnostic,c(ver,dat))
-    
+
     diagnostic.names = c(diagnostic.names,s.info[["loadedOnly"]][[i]]$Package)
   }
 }
@@ -61,9 +61,9 @@ diagnostic.rows = 19   #MAGIC NUMBER - TRIAL & ERROR
 while (last.diagnostic <= nrow(diagnostic)){
   tmp.diagnostic = diagnostic[last.diagnostic:min(nrow(diagnostic),last.diagnostic+diagnostic.rows),]
   layout(c(1,1))
-  # textplot(cbind(tmp.diagnostic),valign="top") 
+  # textplot(cbind(tmp.diagnostic),valign="top")
 
-  
+
   last.diagnostic = last.diagnostic + diagnostic.rows + 1
 }
 

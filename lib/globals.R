@@ -6,8 +6,16 @@ add.config(
   lastYr = as.numeric(format(Sys.Date(), format="%y")) - 1,
   LastYr4 = as.numeric(format(Sys.Date(), format="%Y"))-1,
   currentAY = as.numeric(paste(as.numeric(format(Sys.Date(), format="%y")) - 1, as.numeric(format(Sys.Date(), format="%y")), sep = "")),
-  header = "USG Tuition Differential" # header in reports
+  header = "Google Sync" # header in reports
 )
+
+onedrive_url    <- "https://excel.officeapps.live.com/x/_layouts/XlFileHandler.aspx?WacUserType=WOPI&usid=c64cc810-ee51-428d-b18f-345a147afceb&NoAuth=1&waccluster=US6"
+syncFileDate    <-  gsub("-", "", Sys.Date())
+
+osfa_counts_url <- "http://apps.osfa.uga.edu/decrypt.php?path=Banner/Argos/Dashboard_Data/OSFA%20Counts_"
+osfa_funds_url  <- "http://apps.osfa.uga.edu/decrypt.php?path=Banner/Argos/Dashboard_Data/OSFA%20Funds_"
+osfa_counts     <- paste(osfa_counts_url, ".csv", sep = syncFileDate)
+osfa_funds      <- paste(osfa_funds_url,".csv", sep = syncFileDate)
 
 # Add project specific configuration that can be overridden from load.project()
 add.config(

@@ -1,14 +1,19 @@
-# Example preprocessing script.
-# How Do I in R?                                                                https://tinyurl.com/y9j67lfk
+# Example preprocessing script.  How Do I in R?
+# https://tinyurl.com/y9j67lfk
 
-# checkpoint("2015-01-15") ## or any date in YYYY-MM-DD format after 2014-09-17 https://tinyurl.com/yddh54gn
+# checkpoint('2015-01-15') ## or any date in YYYY-MM-DD
+# format after 2014-09-17 https://tinyurl.com/yddh54gn
 
 # Processing Start Time
 start.time = Sys.time()
+
+# osfa_Data   <- read_url(onedrive_url)
+
+osfa_counts     <- fread(osfa_counts)
+osfa_funds      <- fread(osfa_funds )
 
 # VERSION HISTORY
 a00.version = "1.0.0"
 a00.ModDate = as.Date("2019-07-01")
 
-# 2019.07.01 - v.1.0.0
-#  1st release
+# 2019.07.01 - v.1.0.0 1st release

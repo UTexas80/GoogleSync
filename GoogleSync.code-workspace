@@ -2,6 +2,14 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "C:\\Users\\gfalk\\Documents\\GitHub\\ProjectTemplate"
 		}
-	]
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"tab.unfocusedActiveBorder": "#fff0"
+		}
+	}
 }
