@@ -9,7 +9,15 @@
 	],
 	"settings": {
 		"workbench.colorCustomizations": {
-			"tab.unfocusedActiveBorder": "#fff0"
-		}
+			"tab.unfocusedActiveBorder": "#fff0",
+			"activityBar.activeBorder": "#5959c6",
+			"activityBar.inactiveForeground": "#e7e7e799",
+			"activityBarBadge.background": "#5959c6",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#050e0599",
+			"titleBar.inactiveForeground": "#e7e7e799",
+			"statusBarItem.hoverBackground": "#123412"
+		},
+		"peacock.color": "#050e05"
 	}
 }

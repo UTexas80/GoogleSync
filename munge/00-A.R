@@ -24,15 +24,18 @@ gdrive_url_dashboard_training   <- "https://docs.google.com/spreadsheets/d/1j-8l
 # https://docs.google.com/spreadsheets/d/e/2PACX-1vRThAlCxUUbIqsI8boOlzQDW8VmLoYsa2yUvecBGJByk8zRIMUvQN6oRrltxHgzw5tGQQuhgy4ic2xF/pubhtml?gid=609577956&single=true
 
 # syncFileDate    <-  gsub("-", "", Sys.Date())
-syncFileDate    <- '20191122'
+syncFileDate    <- '20200117'
 
 osfa_counts_url <- "http://apps.osfa.uga.edu/decrypt.php?path=Banner/Argos/Dashboard_Data/OSFA%20Counts_"
 osfa_funds_url  <- "http://apps.osfa.uga.edu/decrypt.php?path=Banner/Argos/Dashboard_Data/OSFA%20Funds_"
-osfa_counts     <- paste(osfa_counts_url, ".csv.gpg", sep = syncFileDate)
+osfa_counts     <- paste(osfa_counts_url, ".csv", sep = syncFileDate)
 osfa_funds      <- paste(osfa_funds_url,".csv.gpg", sep = syncFileDate)
 
 osfa_counts     <- fread(osfa_counts)
 osfa_funds      <- fread(osfa_funds )
+
+drive_get("1vRThAlCxUUbIqsI8boOlzQDW8VmLoYsa2yUvecBGJByk8zRIMUvQN6oRrltxHgzw5tGQQuhgy4ic2xF")
+# drive_update(driveCounts$id, osfa_counts)
 
 # VERSION HISTORY
 a00.version = "1.0.0"

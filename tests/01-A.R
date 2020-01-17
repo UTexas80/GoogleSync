@@ -5,11 +5,6 @@
 
 # drive_get(id = "1j-8lMqz88S4yWqApEQoRnK3tKULme-MEeiejX5fHGMo")
 # osfaDashboard <- osfaDashboard %>%drive_update(osfaData)
-drive_get("1vRThAlCxUUbIqsI8boOlzQDW8VmLoYsa2yUvecBGJByk8zRIMUvQN6oRrltxHgzw5tGQQuhgy4ic2xF")
-
-drive_update(driveCounts$id, osfa_counts)
-
-
 
 library(RJSONIO)
 sskey='0AmbQbL4Lrd61dDBfNEFqX1BGVDk0Mm1MNXFRUnBLNXc'
