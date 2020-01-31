@@ -3,7 +3,20 @@ helper.function <- function()
   return(1)
 }
 
-# Reading OneDrive files to R                                                  
+# Reading OneDrive files
+gdrive_write <- function (url,sheet_name) {
+
+  osfa_url <- paste(url,".csv", sep = syncFileDate)
+  osfa_file <- fread(osfa_counts_url)
+  gdrive_file <-  read_sheet(ss = gdrive_dashboard, sheet = sheet_name)
+  print(paste0(nrow(gdrive_file), " records in ", sheet_name ))
+  sheets_write(osfa_file, gdrive_dashboard, sheet = sheet_name)
+  gdrive_file <-  read_sheet(ss = gdrive_dashboard, sheet = sheet_name)
+  print(paste0(nrow(gdrive_file), " records in ", sheet_name ))
+
+}
+
+# Reading OneDrive files to R
 #  https://is.gd/DJU8BA
 read_url  <- function(url, ...){
   tmpFile <- tempfile()

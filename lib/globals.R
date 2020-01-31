@@ -9,6 +9,9 @@ add.config(
   header = "Google Sync" # header in reports
 )
 
+gdrive_dashboard <- drive_get(id = "1j-8lMqz88S4yWqApEQoRnK3tKULme-MEeiejX5fHGMo")
+osfa_counts_url     <- "http://apps.osfa.uga.edu/decrypt.php?path=Banner/Argos/Dashboard_Data/OSFA%20Counts_"
+osfa_funds_url      <- "http://apps.osfa.uga.edu/decrypt.php?path=Banner/Argos/Dashboard_Data/OSFA%20Funds_"
 onedrive_url    <- "https://excel.officeapps.live.com/x/_layouts/XlFileHandler.aspx?WacUserType=WOPI&usid=c64cc810-ee51-428d-b18f-345a147afceb&NoAuth=1&waccluster=US6"
 
 # Add project specific configuration that can be overridden from load.project()
