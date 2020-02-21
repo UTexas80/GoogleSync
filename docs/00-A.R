@@ -26,6 +26,8 @@ gdrive_url_dashboard_training   <- "https://docs.google.com/spreadsheets/d/1j-8l
 
 onedrive_emails     <- "https://excel.officeapps.live.com/x/_layouts/XlFileHandler.aspx?WacUserType=WOPI&usid=e8f60540-464d-43d2-9da7-89e881ffa84e&NoAuth=1&waccluster=US4"
 
+ondrive_dashboard <- "https://outlookuga-my.sharepoint.com/:x:/r/personal/rtucker_uga_edu/Documents/OSFA%20Data.xlsx?d=w27172e55085f424a818e022f59d49d07&csf=1&e=Iiqe3z"
+
 # syncFileDate      <-  gsub("-", "", Sys.Date())
 syncFileDate        <- '20200131'
 
