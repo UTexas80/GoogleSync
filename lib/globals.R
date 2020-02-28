@@ -14,6 +14,7 @@ osfa_counts_url     <- "http://apps.osfa.uga.edu/decrypt.php?path=Banner/Argos/D
 osfa_funds_url      <- "http://apps.osfa.uga.edu/decrypt.php?path=Banner/Argos/Dashboard_Data/OSFA%20Funds_"
 onedrive_url        <- "https://excel.officeapps.live.com/x/_layouts/XlFileHandler.aspx?WacUserType=WOPI&usid=c64cc810-ee51-428d-b18f-345a147afceb&NoAuth=1&waccluster=US6"
 onedrive_dashboard  <- "https://outlookuga-my.sharepoint.com/:x:/g/personal/rtucker_uga_edu/EVUuFydfCEpCgY4CL1nUnQcBWpZLBLGLKa88Q1bTX6A-OA?email=gfalk%40uga.edu&e=4%3aWEwiwo&at=9"
+odfb_dashboard      <- "https://outlookuga-my.sharepoint.com/:x:/r/personal/rtucker_uga_edu/Documents/OSFA%20Data.xlsx?d=w27172e55085f424a818e022f59d49d07&csf=1"
 # Add project specific configuration that can be overridden from load.project()
 add.config(
   apply.override = TRUE
