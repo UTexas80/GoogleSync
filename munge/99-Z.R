@@ -1,11 +1,31 @@
-# VERSION HISTORY
+################################################################################
+## Step 99.00: Program EOJ                                                   ###
+################################################################################
 z99.version = "1.0.0"
 z99.ModDate = as.Date("2019-07-01")
-
+################################################################################
+## Step 99.01 create object table                                            ###
+################################################################################
+dtObj <- setDT(lsos(), keep.rownames = T)[]
+names(dtObj)[1] <- "Name" ### rename data.table column
+lsObj <- list(dtObj[Type == "data.table" & Length_Rows == 0][, 1])
+# ------------------------------------------------------------------------------
+dtTables <- data.table::tables()
+lTables <- lsos()
+# dtObj[Type=='data.table' & Length_Rows == 0]
+################################################################################
+df <- ls()[sapply(ls(), function(x) is.data.frame(get(x)) | is.xts(get(x)))]
+l <- ls()[sapply(ls(), function(x) is.data.frame(get(x)))]
+################################################################################
+## Step 99.02 remove unwanted data.frames; e.g. 'metadata' in its name       ###
+################################################################################
+rm(list = ls()[grepl("(SQL|metadata)", ls())])
+# ------------------------------------------------------------------------------
 # save RData image
-save.image("GoogleSync.RData")
-
-# ## DIAGNOSTIC PAGE
+# save.image("GoogleSync.RData")
+################################################################################
+## Step 99.03 DIAGNOSTIC PAGE                                                ###
+################################################################################
 # s.info = sessionInfo()
 # diagnostic = data.frame("Version","Date")
 # diagnostic[,1]=as.character(diagnostic[,1])
@@ -66,10 +86,15 @@ save.image("GoogleSync.RData")
 #
 #   last.diagnostic = last.diagnostic + diagnostic.rows + 1
 # }
-
+################################################################################
+## Step 99.98: PROCESSING TIME                                               ###
+################################################################################
 finish.time = Sys.time()
 time = finish.time - start.time
 print(finish.time - start.time)
-
-# 2019.01.01 - v.1.0.0                                                          http://tinyurl.com/y54k8gsw
-#  1st release                                                                  http://tinyurl.com/yx9w8vje
+################################################################################
+## Step 99.99: VERSION HISTORY                                               ###
+################################################################################
+# 2019.01.01 - v.1.0.0                               http://tinyurl.com/y54k8gsw
+#  1st release                                       http://tinyurl.com/yx9w8vje
+# ------------------------------------------------------------------------------

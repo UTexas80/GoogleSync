@@ -1,12 +1,12 @@
 
 # MySQL Connection
 # --------------------------------------------------------------------------
-mydb = dbConnect(MySQL(),
-                 user ='gfalk',
-                 password = key_get("user_email", "gfalk"), # "password",
-                 dbname   ='OSFA_DB1',
-                 port     = 3306,
-                 host     ='172.17.140.57')
+# mydb = dbConnect(MySQL(),
+#                  user ='gfalk',
+#                  password = key_get("user_email", "gfalk"), # "password",
+#                  dbname   ='OSFA_DB1',
+#                  port     = 3306,
+#                  host     ='172.17.140.57')
 # --------------------------------------------------------------------------
 end.time        <- Sys.time()
 print(end.time - start.time)
